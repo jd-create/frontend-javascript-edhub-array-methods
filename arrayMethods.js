@@ -42,7 +42,11 @@ console.log(birthYearInventors);
 // 3. Maak een array met daarin alle volledige namen van de uitvinders (dus voor- en achternaam als één string)
 // Verwachte uitkomst: [ 'Albert Einstein', 'Isaac Newton', 'Galileo Galilei', 'Marie Curie', 'Johannes Kepler', 'Nicolaus Copernicus', 'Max Planck', 'Katherine Blodgett', 'Ada Lovelace', 'Sarah E. Goode', 'Lise Meitner', 'Thomas Edison']
 
+const fullnameInventors = inventors.map((inventorDetail) => {
+  return inventorDetail.first + " " + inventorDetail.last;
+})
 
+console.log(fullnameInventors);
 
 // 4. Sorteer de uitvinders op geboortejaar, oplopend van oudste naar jongste uitvinder
 // Verwachte uitkomst:
