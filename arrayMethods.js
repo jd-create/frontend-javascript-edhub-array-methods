@@ -65,9 +65,14 @@ console.log(fullnameInventors);
 //   { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 }
 // ]
 
-const sortedInventors = inventors.sort((a, b) => a - b);
+const sortedInventorsOldToRecent = inventors.sort((a,b) => {
+  return a.year - b.year;
+})
 
-console.log(sortedInventors);
+console.log(sortedInventorsOldToRecent);
+
+
+
 
 // 5. Sorteer de uitvinders op hoeveel jaren ze geleefd hebben, van langste leven naar kortste leven
 // Verwachte uitkomst:
@@ -86,7 +91,12 @@ console.log(sortedInventors);
 // { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 }
 // ]
 
+const sortedInventorsOldToYoungOfAge = inventors.sort((b,a ) => {
+  return  (a.passed - a.year) - (b.passed - b.year);
 
+});
+
+console.log(sortedInventorsOldToYoungOfAge);
 
 
 // 6. Vind de gegevens over de uitvinder wiens achternaam 'Edison' is.
